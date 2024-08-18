@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title> The Chilord Website </title>
+     <link type="text/css" rel="stylesheet"
+href="css.css">
+<style>
+body {
+  background-image: url('Outer Space.jpeg');
+}
+</style>
+    <header>
+        <h1>The Chilord Club</h1>
+    </header>
+    <main>
+       <section>
+           <div>
+              <h2 class="new">My website is to keep people informed</h2>
+           </div>
+       </section>
+<section>
+   <div>
+      <h3>We will mostly dwell in History.</h3>
+   </div>
+</section>
+<section>
+   <div>
+     <h4>We will sometimes do Civics, Math and Programming</h4>
+   </div>
+</section>
+<section>
+    <nav>
+     <ul>
+          <li><a href= "#">Home</a></i>
+          <li><a href= "#">Our Activicties</a></li>
+          <li><a href= "#">Our Gallery</a></li>
+          <li><a href= "#">Club Members</a></li>
+          <li><a href= "#">About Us</a></li>
+     </ul>
+    </nav>
+</section>
+<section>
+  <div class="main">
+       <div class="mainc">
+         <h2>Welcome to </h2>
+         <p style="font size": 60px;
+      text-align: center; color:" dark-red">THE CHILORD CLUB </p>
+<img src="pictures/Chilord.jpeg" alt"Chike">
+           </p>
+      </div>
+   </div>
+</section>
+<section>
+       <div class="row" style="border" : 7px solid red">
+           <div class="column" style="background color:dark-red">
+        <h2>AIM</h2>
+      <p class="para"> The Chilord Club aims at improving knowledge in History, Math and Coding. We mould children into what our world would be proud of, leaders of the future.</p>
+        </div>
+
+<div class="column" style="background-color: dodgerblue; height: 120px">
+   <h2 style="color: black">VISION</h2>
+    <p class="para" style="color: "orange">We will make sure they(the members) recieve good education in the world.</p>
+      </div>
+
+      <div class="column" style="background-color: purple;">
+         <h2>MISSION</h2>
+         <p class="para"> We will make sure every member is well disiplined and bring out the inner talent of our members.</p>
+            </div>
+            </div>
+</section>
+  </main>
+ <main>
+   <section>
+       <nav>
+          <ul>
+              <li><a href="Indexgreat.html">Home</a></li>
+              <li><a href="Activitygreat.html">Our Activicties</a></li>
+            <li><a href="Gallerygreat.html">Our Gallery</a></li>
+        <li><a href="Membergreat.html">Club Members</a></li>
+                 <li><a href=" Aboutgreat.html">About Us</a></li>
+             <li><a class= "active" href="Honourgreat.html">Roll of Hounour</a></li>
+             <li><a class= "active" href="Adgreat.html">Advertisement</a></li>
+          </ul>
+      </nav>
+   </section>
+
+
+ 
+<section>
+  <h2> The Chilord Club is an organisation founded on the 9th of July, 2022. It helps to promote the skills of people. The founder is Njokanma Raphael Njokanma who is a decade old. It currently has seven members, mainly composing of friends.</h2>
+</section>
+</main>
+   <main>
+   <h2>Display I am a great coder, the founder of this club </h2>
+<script>
+ if (20 < 18) {
+    alert ("True")
+} else{
+     alert("False")
+}
+
+</script>
+
+<script>
+let count = 0;
+do {
+    count++;
+   alert ('count is ' + count);
+ } while (count < 10);
+
+</script>
+
+<script>
+  if (2 < 18) {
+        alert("True")
+}
+
+</script>
+
+<h2>Prompt Statement</h2>
+    <p id= "abc"></p>
+
+   <script>
+       alert("I am a great coder, the founder of this club. ");
+   </script>
+   <script>
+       alert("Happy birthday! ");
+   </script>
+
+  </main>   
+
+<h2>Simple Calculator</h2>
+
+<p=id"abc"></p>
+
+<script>
+ <p> var a = 87;</p>
+<p> var b = 10;</p>
+ <p> var c = a++;</p>
+  
+
+document.getElementById ("abc") .innerHTML =
+        "The value of c is " a + 1";
+<h3> The value of c is 88 </h3>
+
+</script>
+
+<h2>Prompt Statement</h2>
+    <p id= "abc"></p>
+
+<script>
+     var name= prompt("What is your name")
+
+     document.getElementById ("abc") .innerHTML =
+     " Your name is " + name + ".";
+</script>
+<script>
+     var name= prompt("What is your age")
+
+     document.getElementById ("abc") .innerHTML =
+     " Your age is " + age + ".";
+</script>
+<script>
+     var name= prompt("When is your birthday?")
+
+     document.getElementById ("abc") .innerHTML =
+     " Your birthday is " + name + ".";
+</script>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Sign In </h2>
+    <h2 class="inactive underlineHover">Sign Up </h2>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+  <script>  
+//javascript
+const express = require('express');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const app = express();
+
+app.use(express.json());
+
+const users = []; // Simulated user database
+
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+
+    // Retrieve user from database (simulated here)
+    const user = users.find(u => u.username === username);
+    
+    if (user && bcrypt.compareSync(password, user.passwordHash)) {
+        // Generate JWT token
+        const token = jwt.sign({ username: user.username }, 'secretKey', { expiresIn: '1h' });
+        res.json({ token });
+    } else {
+        res.status(401).send('Invalid credentials');
+    }
+});
+
+// Start server
+app.listen(3000, () => console.log('Server running on port 3000'));
+</script>
+  </div>
+</div>
+
+
+<main>
+   <section>
+       <nav>
+          <ul>
+              <li><a href="Indexgreat.html">Home</a></li>
+              <li><a href="Activitygreat.html">Our Activicties</a></li>
+            <li><a href="Gallerygreat.html">Our Gallery</a></li>
+        <li><a href="Membergreat.html">Club Members</a></li>
+                 <li><a href=" Aboutgreat.html">About Us</a></li>
+             <li><a class= "active" href="Honourgreat.html">Roll of Hounour</a></li>
+             <li><a class= "active" href="Adgreat.html">Advertisement</a></li>
+          </ul>
+      </nav>
+   </section>
+
+
+<main>
+ <section>
+     <nav>
+      <form action="file:///C:/Users/HOME/Desktop/CodingClub2022%203/Indexgreat.html/login.php">
+       <p>Username:</p>
+        <img class="img-lincoln" src="Pictures/Outer Space.jpeg" alt"Outer Space">
+        <input type="text" name="username" size "20" 
+          maxlength="40" />
+       <p>Password</p>
+         <input type="password" name"password" size "20"
+           maxlength="40" />
+      </p>
+      </form>
+<button><li><a href="Activitygreat.html">Log in</a></li></button>
+          </nav>
+       </section>
+          </main>
+<main>
+ <section>
+     <nav>
+       <form action="file:///C:/Users/HOME/Desktop/CodingClub2022%203/Indexgreat.html/comments.php">
+         <p>On a scale of one to ten, how well did I do creating this website as a ten year old?</p>
+           <textarea name="comments" cols="20" rows="4">Enter you opinion...</textarea>
+             </form>
+                </nav>
+       </section>
+          </main>
+
+<h2>Also read my article:</h2>
+
+
+<iframe src="https://onedrive.live.com/embed?cid=7B70A966A049F01E&resid=7B70A966A049F01E%21117&authkey=AAaryuRHNxYx8T4&em=2" width="476" height="288" frameborder="0" scrolling="no"></iframe>
+<h2>Dental occlusion - Angle’s classifications
+ 
+
+ 
+Influence of digit sucking on masseter muscles thickness on children in Nigeria.
+
+
+What is digit sucking?
+
+Digit sucking's the act of sucking the fingers usually when a baby is hungry or when an infant {sometimes toddler, teenager, and even adolescent or an adult} has become addicted to it. “Digit” refers to the fingers.
+
+What are the masseter muscles?
+When you clench your teeth, the visible bones are there. The muscles that make this movement possible are called the masseter muscles.     
+
+
+What those term malocclusion means?
+In orthodontics, a malocclusion is a misalignment or incorrect relation between the teeth of the upper and lower dental arches when they approach each other as the jaws close. The English-language term dates from 1864;[1] Edward Angle (1855-1930), the "father of modern orthodontics",[2][need quotation to verify][3][need quotation to verify] popularized it. The word "malocclusion" derives from occlusion, and refers to the manner in which opposing teeth meet (mal- + occlusion = "incorrect closure").
+The malocclusion classification is based on the relationship of the mesiobuccally cusp of the maxillary first molar and the buccal groove of the mandibular first molar.  If this molar relationship exists, then the teeth can align into normal occlusion. According to Angle, malocclusion is any deviation of the occlusion from the ideal.[4] However, assessment for malocclusion should also take into account aesthetics and the impact on functionality. If these aspects are acceptable to the patient despite meeting the formal definition of malocclusion, then treatment may not be necessary.
+Abstract
+The likelihood of birth defects in orofacial tissues is high due to the structural and developmental complexity of the face and the susceptibility to intrinsic and extrinsic perturbations. Skeletal malocclusion is caused by the distortion of the proper mandibular and/or maxillary growth during fetal development. Patients with skeletal malocclusion may suffer from dental deformities, bruxism, teeth crowding, trismus, mastication difficulties, breathing obstruction and digestion disturbance if the problem is left untreated. In this review, we focused on skeletal malocclusion that affects 27.9% of the US population with different severity levels. We summarized the prevalence of class I, II and III of malocclusion in different ethnic groups and discussed the most frequent medical disorders associated with skeletal malocclusion. Dental anomalies that lead to malocclusion such as tooth agenesis, crowding, missing teeth and abnormal tooth size are not addressed in this review. We propose a modified version of malocclusion classification for research purposes to exhibit a clear distinction between skeletal vs. dental malocclusion in comparison to Angle’s classification. In addition, we performed a cross-sectional analysis on orthodontic (malocclusion) data through the Big Mouth Dental Data Repository to calculate potential association between malocclusion with other medical conditions. In conclusion, this review emphasizes the need to identify genetic and environmental factors that cause or contribute risk to skeletal malocclusion and the possible association with other medical conditions to improve assessment, prognosis and therapeutic approaches.
+Keywords: Skeletal malocclusion, Micrognathia, Retrognathia, Prognathies, Late-onset diseases
+Go to:
+Introduction
+Disorders of the head and face are very common birth defects in all racial populations, and can appear as isolated phenotype or as part of a syndrome. The prevalence of craniofacial anomalies varies among different ethnicities based on genetic background, geography, socio-economic status and environmental factors. Because of the structural complexity of the craniofacial region, variations in genetic and environmental factors may have a profound effect on development, and could lead to congenital birth defects. Cleft lip and palate are one of the most common birth defects with the highest prevalence of 1 in 500 live births in Asian population [1]. Skeletal malocclusion is another common birth defect that occurs due to the distortion of the maxillary and/or mandibular development that will have a huge impact on the positioning, alignment and health of the primary and permanent teeth. Micrognathia, a small mandible or maxilla, is the most common cause of skeletal malocclusion with a prevalence of 1/1,500 live births [2], and is frequently associated with other skeletal abnormalities, cleft palate and tongue deformities (glossopteris). Micrognathia occurs as an isolated form or as part of 468 syndromic disorders according to Online Mendelian Inheritance in Man (OMIM) database. It has been reported that all patients with micrognathia are also affected with retrognathia (abnormal posterior positioning of the mandible or maxilla relative to the facial structure) due to the small size and growth pattern [3]. On the other hand, macrognathia is characterized by the overgrowth of the mandible or maxilla above the normal values where the manifestation becomes more prominent at the peak of jaw growth around the age of 12.2 years in females and 14 years in males [4].
+Sonographic detection used for prenatal diagnosis of isolated micrognathia (manifestation of class II malocclusion) is normally disparate from the actual natal outcome in the large majority of cases. More than 90% of fetuses diagnosed with isolated micrognathia by 3D ultrasound represented additional deformities with clefting of soft palate being the most common anomaly (73% of micro gnathic cases) [2]. This is due to the small size of the mandible that causes the tongue to stick to the roof of the mouth and prevent the appropriate downward vertical growth, elevation and fusion of the secondary palatal shelves. The clefts of the soft and hard palate in these cases have the characteristic feature of the U or V shape clefting indicating a complete obstruction of secondary palatal development. Other studies have argued that isolated micrognathia is a harbinger of severe diseases in humans [5]. About one-third of children diagnosed with micrognathia also have mild to severe developmental delay [2]. However, a genetic test for many hereditary diseases with micrognathia such as Pierre Robin sequence, isolated micrognathia, agnathia-otocephaly complex, Cartel-Manzke syndrome and cerebrocostomandibular syndrome cannot be ordered because the etiological factors have not been demarcated. Furthermore, the genetic and environmental components of skeletal malocclusion remain obscure.
+Skeletal malocclusion according to Angle’s classification falls into class II and III depending on the position of the upper first molar to the lower first molar. In class II malocclusion, the mesiobuccally cusp of the upper first molar is mesial (anteriorly) positioned relative to the buccal groove of the lower first molar, while in class III, the mesiobuccally cusp of the upper first molar is distally (posteriorly) positioned relative to the buccal groove of lower first molar [6, 7]. A cephalometric radiograph for the face allows the construction of geometric cranial planes and the measurement of different lengths and angles of the jaws (Fig. 1A, B). Relating the position of the maxilla and mandible to the anterior cranial base is the most widely used method of assessing the anterior/posterior (AP) relationship of the maxilla and mandible. The line joining the midpoint of Sella turcica (S) and the junction of the frontal and nasal bone (N) represent the position of the anterior cranial base (Fig. 1B). The deepest concavity of the maxillary (point A) and mandibular alveolar processes (point B) represent corresponding maxilla and mandible in the AP plane, and therefore the angle S-N-A represents the AP position of the maxilla in relation to the cranial base. Similarly, the S-N-B angle represents the same for the mandible (Fig. 1C). Numerous studies have attempted to assess the “normal” values for SNA, SNB and other cephalometric variables. Surprisingly the norms for SNA and SNB in all these studies across the years are well established and very similar [4, 8]. In addition, they are universally used by orthodontists and oral and maxillofacial surgeons, and so there is no need for special radiographic investigations, as these data can be obtained from routine orthodontic and surgical records. Therefore, we suggest the use of SNA and SNB as a measure of retrognathism and prognathism (abnormal posterior or anterior position of the mandible or maxilla).
+ 
+Figure 1
+(A) Cephalometric radiograph of a 13-year-old male. (B) Cephalometric tracing of skeletal landmarks used for geometric constructions. (C) The anterior cranial base (S-N plane) and the angle between SNA and SNB planes that indicate the maxillary and mandibular positions, respectively. (D) The mandibular and maxillary landmarks and planes used to measure the length. Co-Pg is the linear mandibular length from condyloid to pogonion. Co-Go is the ramus length from the condyloid to the gonion. Go-Pg is the mandibular corpus length from the gonion to the pogonion.
+However, there are some limitations to this method that need to be addressed. The points A and B are not on the basal bone so they are affected by the movement of teeth. This should not be a problem in a cross-sectional and pre-treatment study. The other limitation is that SNA and SNB do not take the direction of growth into consideration. While this is not really a problem in the maxilla as it tends to grow downward and forward from the cranial base, mandibular growth can have one of two growth rotations: clockwise or anti-clockwise. The clockwise rotation brings the mandible downward and backward with growth that consequently makes retrognathia worse with respect to overall facial appearance. On the other hand, anti-clockwise rotation does the opposite (downwards and forwards) which improves retrognathia but makes prognathic worse. It is important to mention that the geometric values for normal occlusion vary between racial groups, genders and ages [9].
+The difference between the lengths of the mandibular and maxillary in males and females is not significant at younger ages [7]. However, the differences become more prominent at the age of 12 years or older. To determine the severity of skeletal malocclusion, it is important to develop norm values for different racial groups and for males and females of each ethnicity. For measurement of mandibular micrognathia and macrognathia, we propose a linear measurement of the condyloid (Co) to the pogonion (Pg) for the diagonal mandibular length, condyloid (Co) to the gonion (Go) for the ramus length and gonion (Go) to pogonion (Pg) for the corpus length (Fig. 1D). To minimize the degree of error for clinical treatment of skeletal malocclusion, it is recommended to include the parents for craniofacial assessment and analysis because jaw phenotypes are heritable. Therefore, there is a big need for more research on skeletal malocclusion to identify genetic risk factors. Advanced research on this subject will help improve the precision of prognosis for therapeutic approaches.
+Skeletal malocclusion affects dental and facial tissues as mentioned before. There are a handful of reports showing that skeletal malocclusion can affect the general health of patients through their role in causing airway obstructions, sleep apnea, gastric disturbance, immune deficiencies and delayed developmental growth [5, 6, 10]. Besides these physiological disorders, it has been reported that skeletal malocclusion leads to adverse influences on intellectual wellbeing, social skills, economical and psychological status [10, 11]. Psychological distress is more readily found to be associated with malocclusion especially in the younger and university educated people [10]. Severity of skeletal malocclusion is indirectly proportional to the quality of life in regards to social and emotional fronts as well as speech and mastication efficiency [10]. Bruxism, dental trauma and dental caries are significantly more prevalent in skeletal malocclusion cases compared to normal occlusion cases [12-14]. So far, little is known about the association between skeletal malocclusion and late onset diseases.
+Go to:
+Prevalence of Malocclusion
+Prevalence of classes I and II malocclusion are very high in comparison to class III and other craniofacial anomalies. Lack of randomization of the data [15] and failure to include other races in the studies are the chief drawbacks of malocclusion classification. In 1959, Altemus reported a similar study in Black Americans for the first time. His results showed noticeable deviation from Angle’s work in 1907 (Table 1). Another study by Garner and Butt suggested a difference in prevalence among black Americans and Kenyan Population. The results for Black Americans were similar to the Altemis’s results. There were no class II div II cases found in Kenyan sample [16] (Table 1).
+Table 1
+Prevalence of Class I, II and III Malocclusion in Different Ethnic Groups
+Author, year	Ethnicities	Sample size	Class I (a + b) ** (%)	Class II (a + b) *** (%)	Class III (%)
+Angle, 1907	Caucasians [17]	1,000	69	19 + 4	3.40
+Altemus, 1959	Black American [18]	3,280	83	12	5
+Cohen, 1970	Blacks/Whites [19]	410/349	71/53.6	11.4/33.6	6.3/4.7
+Garner, 1985	Black American [16]	447	27 + 44	16	8.70
+Garner, 1985	Kenyan [16]	471	16.8 + 51.7	7.90 + 0	16.80
+Phaphe, 2012	Urban Indian [20]	1,000	18	30.1	1.60
+Steigman, 1983	Israeli Arab [21]	803	85	8.5 + 1.7	1.3
+Silva, 2001	Latino [22]	507	62.9 + 6.5	21.5	9.1
+Lew, 1993	Chinese [23]	1,050	7.1 + 58.8	21.5	12.6
+Garbin, 2010	Brazilian [24]	734	55.92	42.86	1.22
+Hamdan, 2001	Jordanian [25]	320	62.5	21.5	16
+Average			68.7	20.9	7.2
+Open in a separate window
+**Class I (a + b) = class I neutrocclusion + class I malocclusion. ***Class II (a + b) = class II Div I + class II Div II.
+In 1983, Kapila reported that the frequency of normal occlusion was significantly more in African children compared to Asian children [16]. No gender difference was documented in all three classes of malocclusion. This fact was repeatedly backed by many studies [26-32]. Emrich, Brodie and Blayney indicated in a study conducted in 1965 that class II malocclusion was twice as more prevalent in white population compared to black population [15], while class III malocclusion was more frequent in blacks when compared with whites [29] (Table 1). Class III malocclusion is distributed heterogeneously in different races ranging from less than 5% in whites and up to 14% in Syrian natives [33]. Prevalence of class III malocclusion has been reported to be 12%, 10.5% and 9.4% in Asian, Caucasian Egyptians and Saudi Arabian population respectively [34]. Boeck et al [35] analyzed 171 cases with skeletal malocclusion and the classified them into the three different classes of malocclusion across different sexes and ethnicities. Table 2 shows the percentages of class I, class II and class III in 171 patients affected with skeletal malocclusion patients across sex and race [35].
+Table 2
+Percentages of Class I, Class II and Class III Cases with Skeletal Malocclusion Patients Across Sex and Race
+	Class I (n = 11)	Class II (n = 79)	Class III (n = 81)
+Sex			
+ Male	5.80%	36.20%	58%
+ Female	6.90%	52.90%	40.20%
+Race			
+ Caucasian	6.30%	48.10%	45.60%
+ Black	10%	20%	70%
+Open in a separate window
+Go to:
+The Etiology of Skeletal Malocclusion
+About 65% of the US population has some degree of malocclusion; however, the cause of malocclusion for the vast majority of the cases is unknown. Children born with craniofacial disorders could be tested for genetic risk factors, but how this information can help in therapeutic approaches is not clear. Harris and Johnson in 1991 reported that the heritability of craniofacial features is very high in comparison to dental characteristics [36]. The pedigree of the Hapsburg Royal family with the prominent prognathic mandible strongly argues in favor of a genetic component in the inheritance of this craniofacial feature. It was noticed that 1/3 of the affected individuals of Hapsburg family with severe class III malocclusion had one parent with a similar phenotype. The pattern of inheritance in Hapsburg family indicates that the mandibular prognathic is not a Mendelian disorder but rather a multifactorial genetic disorder [3]. Patients with Angelman syndrome and fragile X-syndrome have prognathic mandible as a distinctive feature indicating a role of gene dosage and function in mandibular phenotype. Thus, for skeletal malocclusion therapy, if the parents of affected child are included for correlation and analysis, the percentage of successful prognosis is increased [37, 38].
+Go to:
+Risk Factors in Skeletal Malocclusion
+Twin and consanguineous studies have confirmed that mandibular anomalies are commonly encountered genetic conditions [38-41]. These disorders can be studied prenatally but proper diagnosis is difficult as the isolated micrognathia is rarely (< 20%) present and other associated anomalies are challenging to interpret by prenatal examinations [5]. Although genetic involvement has more credit to itself, environmental components [42], like hormones, enlarged tonsils, trauma, instrumental deliveries, also contribute to the phenotype expression in malocclusion. This can be attributed to a notable hindrance in predicting the genetics of skeletal malocclusion [38]. It is almost impossible to control skeletal malocclusion by any kind of early orthodontic treatments due to genetic interference. Orthodontic treatments coupled with orthognathic surgery remain the only resort to overcome this problem [39]. Due to its multi-factorial etiology, some of the elements are possibly being controlled prenatally. In our parallel study, “Discovery of genetic risk factors in micrognathia, a manifestation of Class II skeletal malocclusion”, we aim to identify genetic risk factors involved in the Non syndromic micrognathia and determine the prevalence of micrognathia and retrognathia in Houston. The results of this study will enhance our understanding of the genetic role, thereby providing us with better understanding for the pathophysiology of the craniofacial disorders and molecular targets for therapeutic approaches [40].
+Go to:
+Classification of Malocclusion for Research Purposes
+Malocclusion is one of the most prevalent developmental anomalies of craniofacial structure, the subject of this review. Dr. Edward H. Angle is considered one of the pioneers in developing the field of orthodontics. Angle’s classification in 1899 of occlusion was an important step for formal diagnosis of malocclusion cases toward improving therapeutic approaches. The classification is based on the position of lower molar toward the upper molar and whether it is distally or mesial positioned. However, the distinction between dental vs. skeletal malocclusion for class II and III has not been clearly established. For the purposes of basic and translational research, it is important to determine the contribution and the severity of dental and skeletal malocclusion. Therefore, we propose a modified version of Angle’s classification to make this distinction clearer. The modified version is as follows: Class I: 1) neutrocclusion (ideal); 2) dental malocclusion (including bimaxillary protrusion, spacing, crowding, deep bite and open bite). Class II: 1) malocclusion without skeletal anomalies (first lower molar distally positioned); 2) mandibular retrognathia/micrognathia; 3) maxillary prognathic/macrognathia; 4) mandibular retrognathia and maxillary prognathic. Class III: 1) malocclusion without skeletal anomalies (first lower molar mesial positioned); 2) mandibular prognathism/macrognathia; 3) maxillary retrognathia/micrognathia; 4) mandibular prognathism and maxillary retrognathia.
+According to a report published by the Center of Disease Control (CDC) in 1973 regarding the prevalence of malocclusion in US population, they classified the severity of malocclusion based on the treatment priority index (TPI). This index classifies the severity of malocclusion into five classes based on the need for a treatment (Table 3).
+Table 3
+The Frequencies of Various Occlusion/Malocclusion Categories in US Population Under Different Levels of TPI Scales
+TPI scale	Category	Frequency (%)
+0	Normal occlusion	24.4
+1 - 3	Minor manifestations and treatment need is slight	39.0
+4 - 6	Definite malocclusion but treatment elective	8.7
+7 - 9	Severe handicap, treatment highly desirable	22.4
+10	Very severe handicap with treatment mandatory	5.5
+Open in a separate window
+Go to:
+Association Between Skeletal Malocclusion and Other Medical Conditions
+Although skeletal malocclusion is responsible for several problems of oral cavity [11-14], few studies have discussed its association with other medical conditions and the impact on late-onset diseases.
+Dental anomalies
+Skeletal malocclusion affects oral health quality and is highly associated with dental trauma and mastication difficulties as secondary effects of bruxism and teeth crowding [10, 14]. Bruxism is a parafunctional activity of oral cavity and is not related to eating or talking. It is characterized by excessive grinding of teeth or clenching of jaws. Bruxism may worsen malocclusion and leads to hypersensitive teeth, facial muscle pain and fatigue in almost all cases [13]. Patients with skeletal malocclusion are more likely to be presented with decayed, missed and filled teeth as compared to those with normal occlusion [10, 43]. A study focused on the prevalence of dental anomalies in a population of malocclusion patients found that at least one dental anomaly was present among 74.8% of the orthodontic patients [44]. In addition, a higher proportion of temporomandibular joint (TMJ) dysfunction was found in patients with class II skeletal malocclusion as reported by Simmons [45]. Skeletal malocclusion causes constant stress in the oral cavity leading to teeth clenching and abnormal contraction of muscles. This leads to other degenerative and systemic diseases [46]. On the other hand, many studies showed that malocclusion does not cause an increase in the prevalence of dental caries or TMJ dysfunction [47, 48]. Although premature contacts between teeth in malocclusion may contribute to bruxism, the relationship is not linear and far from being a cause and effect.
+Cleft palate
+During embryonic development of oral cavity, the secondary palatal shelves and tongue grow parallel to each other in the oral cavity, with the tongue initially located between the two shelves. The secondary palatal shelves grow vertically toward the bottom of the mouth until the tongue drops down during the 7 - 8 weeks of gestation. This downward movement of tongue and rising of the shelves is facilitated by the forward and downward movement of the mandible, as it grows [49]. In cases of micrognathia and/or retrognathia, the fetal mandible fails to grow forward and downward leading to abnormal growth of tongue that prevents the elevation and fusion of the secondary palatal shelves. In a study assessing the outcome of prenatal sonographic diagnosis of isolated micrognathia (class II skeletal malocclusion), 93% of the infants also suffered from cleft palate and/or respiratory distress on neonatal examination [2]. Therefore, it is critical to determine whether patients with cleft palate have mandibular abnormalities or not. The proper and accurate diagnosis of the cause of palatal cleft will facilitate the identification of the genetic risk factors and assist in estimating the recurrence risk.
+Sleep apnea
+⦁	Sleep-related breathing disorders were presented at higher frequency in abnormal jaw conditions including mandibular retrognathia, lateral cross-bite and increased overjet [⦁	50]. Airway obstruction in these patients is caused by posterior prolapse of the tongue and may lead to sleep apneas and chronic hypoxia. This condition if left untreated can complicate the survival of the affected child. If the child is able to survive, there is a high possibility of presence of neurological and cognitive delay, cardiopulmonary complications and behavioral issues [⦁	51]. Higher prevalence of narrower upper pharyngeal airways has been observed in cases with class II malocclusion involving vertical growth patterns of facial structure, when compared with controls bearing class I and class II malocclusion with normal growth pattern [⦁	52]. Class III malocclusion can be presented either with maxillary retrusion or with mandibular protrusion with almost similar frequencies [⦁	34, ⦁	53, ⦁	54]. Rapid maxillary expansion during childhood is a procedure to correct maxillary retrusion or hypoplastic maxilla. Maxillary expansion aids in rectification of nasal resistance among patients with respiratory problems [⦁	55]. This suggests the role of class III malocclusion (in case of maxillary retrusion) in causing anterior and posterior nasal obstructions. In addition, a recent study reported an enhanced pulmonary function and significantly better sleep quality following bimaxillary orthognathic surgery in skeletal malocclusion patients [⦁	56].
+Gastric disturbance
+Although malocclusion is responsible for several problems of oral cavity [2, 27, 29], few studies have reported its association with the digestive system. A study conducted on 11 normal occlusion females and 11 malocclusion females noticed a significant relationship between malocclusion and gastric emptying function. This could be due to increased functional burden on stomach due to inferior activity of masticatory muscles in the malocclusion patients [57] causing inadequate mastication of food in the oral cavity.
+Immune system disorders, leukemia and lymphoma
+Immune system anomalies play an eminent role in congenital disorders. The association of facial birth defects in context with immunodeficiency [58] has been suggested in previous studies. A case report of two brothers, with unusual facial features including micrognathia along with other skeletal developmental problems, reported the presence of chemotactic defect and transient hypogammaglobulinemia [59]. Association of lymphoma and craniofacial deformities is not well documented. Lymphomas along with leukemia and neuroblastoma are associated with Dubowitz syndrome. This syndrome is a congenital disorder affecting face development [60, 61]. Facial features are usually characterized by small round face with pointed retrognathic chin giving it a triangular shape, a broad, wide tipped nose, shallow supraorbital ridge with drooping eyelids, and posteriorly angulated low set ears [62]. In the same vein, Down syndrome is a common genetic disorder that has a significantly higher risk for leukemia [63] and is characterized with craniofacial dysmorphology and maxillary deficiencies [64]. These syndromic disorders indicate the need for significant research focusing on craniofacial anomalies and its relevance with leukemia and lymphoma.
+Other medical conditions
+Eggleston stated malocclusion as a probable cause of hypertension in one of his publications [46]. Kilcoyne also stated that dental occlusion problems are a major cause of headache [65]. Similarly, class II division I malocclusion according to Angle’s classification was significantly associated with myopia [38, 66]. Degenerative diseases of heart, joints and teeth are all related to presence of constant distress. Skeletal malocclusion is the contributor of constant distress. Such a stress also leads to myofascial pain and hypertension as a consequence of lack of blood circulation caused by poor contraction of smooth muscles. The relation between malocclusion and presence of hypertension was demonstrated by an experiment using occlusal splint. In this experiment, the use of an occlusal splint helped alleviate the stressors contributed by presence of malocclusion and caused an immediate drop in blood pressure [46].
+The data of 3,019 orthodontic patients with all classes of malocclusion from the Big Mouth Dental Data Repository have been used to identify association between malocclusion and other selected medical conditions [67] (Table 4). The assessment of medical conditions was done based on the clinical forms filled out by the orthodontic patients upon the clinical visit.
+Table 4
+Association Between Malocclusion and Different Medical Conditions for 3,019 Orthodontic (Malocclusion) Patients from the Big Mouth Dental Data Repository [67]
+Medical conditions (variable)	Chi-square value	P value
+Sleep apnea	0.7728	0.379
+GI disorders	12.7649	0.000**
+Lymphoma	2.6326	0.105
+General dental problems	0.0169	0.896
+Loose broken or missing filling	2.2985	0.129
+Bruxism	0.2680	0.605
+Cleft lip and palate	0.8272	0.363
+Hypertension	26.8761	0.000**
+Headache	311.1025	0.000**
+Vision problems	2.9614	0.085
+Functional pain/discomfort of oral cavity	318.2418	0.000**
+Active tuberculosis	91.6427	0.000**
+Open in a separate window
+**Statistical significance.
+Go to:
+Limitations of Our Analysis and Future Studies
+We used malocclusion data for our analysis and these data were not classified into dental and skeletal malocclusion and hence, analysis was done on all mixed cases of dental and skeletal malocclusion.
+We used Pearson’s Chi-square analysis to compute individual probabilities for association with selected medical conditions. The P value < 0.01 is considered highly significant (Table 4).
+Based on published data, isolated severe cases of micrognathia and prognathic of mandible are less frequent compared to the syndromic forms. This makes the study less efficient in concluding the contributing factors of underlying medical conditions [2].
+Go to:
+Conclusions
+Further research, targeting the association of congenital developmental disorders of jaws with deleterious immune system diseases (like tuberculosis) and less severe immune reactions (like allergies), will augment advanced treatment options. Studies targeting skeletal malocclusion in particular are recommended to get more promising results for identifying causes (etiological risk factors) and epidemiological information rather than relying on signs and symptoms to enhance differential diagnosis and management. This work was supported by a start-up fund from UTHealth School of Dentistry to WF.
+Go to:
+Acknowledgments
+We thank Dr. Muhammad Walji for providing us with the access to the Big Mouth Dental Data Repository to use the data in our statistical analysis to determine possible association between malocclusion and other medical conditions. We are also grateful to Dr. Catherine Flaitz for reviewing our manuscript.
+Go to:
+Disclosures
+The authors declare that no competing or financial interests exist.
+Go to:
+References
+1. de Lima RL, Hoper SA, Ghassibe M, Cooper ME, Rorick NK, Kondo S, Katz L. et al. Prevalence and nonrandom distribution of exotic mutations in interferon regulatory factor 6 in 307 families with Van der Woude syndrome and 37 families with popliteal pterygium syndrome. Genet Med. 2009;11(4):241–247. Doi: 10.1097/GIM.0b013e318197a49a. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+2. Vettraino IM, Lee W, Bronsteen RA, Harper CE, Aughton D, Comstock CH. Clinical outcome of fetuses with sonographic diagnosis of isolated micrognathia. Obstet Gynecol. 2003;102(4):801–805. Doi: 10.1016/S0029-7844(03)00672-0. [PubMed] [CrossRef] [Google Scholar]
+3. Proffit WR, Fields HW Jr, Sarver DM. Contemporary Orthodontics. Elsevier Health Sciences. 2006 [Google Scholar]
+4. Buschang PH, Jacob HB, Demirjian A. Female adolescent craniofacial growth spurts: real or fiction? Eur J Orthodox. 2013;35(6):819–825. Doi: 10.1093/ejo/cjs094. [PubMed] [CrossRef] [Google Scholar]
+5. Paladini D. Fetal micrognathia: almost always an ominous finding. Ultrasound Obstet Gynecol. 2010;35(4):377–384. doi: 10.1002/uog.7639. [PubMed] [CrossRef] [Google Scholar]
+6. Boll Halder J, Hanggi MP, Schatzle M, Markic G, Roos M, Peltomaki TA. Dentofacial and upper airway characteristics of mild and severe class II division 1 subjects. Eur J Orthod. 2013;35(4):447–453. doi: 10.1093/ejo/cjs010. [PubMed] [CrossRef] [Google Scholar]
+7. Ghiz MA, Ngan P, Gunel E. Cephalometric variables to predict future success of early orthopedic Class III treatment. Am J Orthod Dentofacial Orthop. 2005;127(3):301–306. doi: 10.1016/j.ajodo.2004.02.014. [PubMed] [CrossRef] [Google Scholar]
+8. Oberoi S, Vargervik K. Hypoplasia and hypodontia in Van der Woude syndrome. Cleft Palate Craniofac J. 2005;42(5):459–466. doi: 10.1597/04-028.1. [PubMed] [CrossRef] [Google Scholar]
+9. Hamdan AM, Rock WP. Cephalometric norms in an Arabic population. J Orthod. 2001;28(4):297–300. doi: 10.1093/ortho/28.4.297. [PubMed] [CrossRef] [Google Scholar]
+10. Masood Y, Masood M, Zainul NN, Araby NB, Hussain SF, Newton T. Impact of malocclusion on oral health related quality of life in young people. Health Qual Life Outcomes. 2013; 11:25. doi: 10.1186/1477-7525-11-25. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+11. Martins-Junior PA, Marques LS, Ramos-Jorge ML. Malocclusion: social, functional and emotional influence on children. J Clin Pediatr Dent. 2012;37(1):103–108. [PubMed] [Google Scholar]
+12. Baskaradoss JK, Geevarghese A, Roger C, Thaliath A. Prevalence of malocclusion and its relationship with caries among school children aged 11 - 15 years in southern India. Korean J Orthod. 2013;43(1):35–41. doi: 10.4041/kjod.2013.43.1.35. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+13. Ghafournia M, Hajenourozali Tehrani M. Relationship between Bruxism and Malocclusion among Preschool Children in Isfahan. J Dent Res Dent Clin Dent Prospects. 2012;6(4):138–142. [PMC free article] [PubMed] [Google Scholar]
+14. Bendgude V, Akkareddy B, Panse A, Singh R, Metha D, Jawale B, Garcha V. et al. Correlation between dental traumatic injuries and overjet among 11 to 17 years Indian girls with Angle's class I molar relation. J Contemp Dent Pract. 2012;13(2):142–146. doi: 10.5005/jp-journals-10024-1110. [PubMed] [CrossRef] [Google Scholar]
+15. Emrich RE, Brodie AG, Blayney JR. Prevalence of Class 1, Class 2, and Class 3 malocclusions (Angle) in an urban population. Prevalence of Class 1, Class 2, and Class 3 malocclusions (Angle) in an urban population. J Dent Res. 1965;44(5):947–953. doi: 10.1177/00220345650440053301. [PubMed] [CrossRef] [Google Scholar]
+16. Garner LD, Butt MH. Malocclusion in black Americans and Nyeri Kenyans. Malocclusion in black Americans and Nyeri Kenyans. Angle Orthod. 1985;55(2):139–146. [PubMed] [Google Scholar]
+17. Angle EH. Malocclusion of the teeth. Malocclusion of the teeth. 1907 [Google Scholar]
+18. Altemus LA. Frequency of the incidence of malocclusion in American negro children aged twelve to sixteen. Angle Orthod. 1959; 29:189–200. [Google Scholar]
+19. Cohen LK, Horowitz HS. Occlusal relations in children born and reared in an optimally fluoridated community. Occlusal relations in children born and reared in an optimally fluoridated community. 3. Angle Orthod. 1970;40(3):159–169. [PubMed] [Google Scholar]
+20. Phaphe S, Kallur R, Vaz A, Gajapurada J, Raddy S, Mattigatti S. To determine the prevalence rate of malocclusion among 12 to 14-year-old schoolchildren of urban Indian population (Bagalkot) J Contemp Dent Pract. 2012;13(3):316–321. doi: 10.5005/jp-journals-10024-1144. [PubMed] [CrossRef] [Google Scholar]
+21. Steigman S, Kawar M, Zilberman Y. Prevalence and severity of malocclusion in Israeli Arab urban children 13 to 15 years of age. Am J Orthod. 1983;84(4):337–343. doi: 10.1016/S0002-9416(83)90350-0. [PubMed] [CrossRef] [Google Scholar]
+22. Silva RG, Kang DS. Prevalence of malocclusion among Latino adolescents. Am J Orthod Dentofacial Orthop. 2001;119(3):313–315. doi: 10.1067/mod.2001.110985. [PubMed] [CrossRef] [Google Scholar]
+23. Lew KK, Foong WC, Loh E. Malocclusion prevalence in an ethnic Chinese population. Aust Dent J. 1993;38(6):442–449. doi: 10.1111/j.1834-7819. 1993.tb04759. x. [PubMed] [CrossRef] [Google Scholar]
+24. Garbin AJI, Perin PCP, Garbin CAS, Lolli LF. Malocclusion prevalence and comparison between the angle classification and the dental aesthetic index in scholars in the interior of Sao Paulo State-Brazil. Dental Press Journal of Orthodontics. 2010; 15:94–102. doi: 10.1590/S2176-94512010000400014. [CrossRef] [Google Scholar]
+25. Hamdan AM, Hamdan MA, Peter W. Prevalence of malocclusion in 16-year-old Jordanian schoolchildren. Community Dent Oral Epidemiol. 2001 [Google Scholar]
+26. Guest SS, McNamara JA, Jr., Baccetti T, Franchi L. Improving Class II malocclusion as a side-effect of rapid maxillary expansion: a prospective clinical study. Am J Orthodox Dentofacial Orthop. 2010;138(5):582–591. doi: 10.1016/j.ajodo.2008.12.026. [PubMed] [CrossRef] [Google Scholar]
+27. Ahangar Atashi MH. Prevalence of Malocclusion in 13–15-Year-old Adolescents in Tabriz. J Dent Res Dent Clin Dent Prospects. 2007;1(1):13–18. [PMC free article] [PubMed] [Google Scholar]
+28. Abu Alaija ES, Al-Khateeb SN, Al-Nimri KS. Prevalence of malocclusion in 13–15-year-old North Jordanian school children. Community Dent Health. 2005;22(4):266–271. [PubMed] [Google Scholar]
+29. Trottman A, Elsbach HG. Comparison of malocclusion in preschool black and white children. Am J Orthodox Dentofacial Orthop. 1996;110(1):69–72. doi: 10.1016/S0889-5406(96)70089-6. [PubMed] [CrossRef] [Google Scholar]
+30. Otuyemi OD, Abidoye RO. Malocclusion in 12-year-old suburban and rural Nigerian children. Community Dent Health. 1993;10(4):375–380. [PubMed] [Google Scholar]
+31. Bugaighis I, Karanth D. The prevalence of malocclusion in urban Libyan schoolchildren. J Orthodox Sci. 2013;2(1):1–6. doi: 10.4103/2278-0203.110325. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+32. Sridharan K, Udupa V, Srinivas H, Kumar S, Sandbhor S. Prevalence of class II malocclusion in Tumkur population. J Dental Sciences and Research. 2011; 2:1–5. [Google Scholar]
+33. Mouakeh M. Cephalometric evaluation of craniofacial pattern of Syrian children with Class III malocclusion. Am J Orthodox Dentofacial Orthop. 2001;119(6):640–649. doi: 10.1067/mod.2001.112671. [PubMed] [CrossRef] [Google Scholar]
+34. Sanborn RT. Differences between the facial skeletal patterns of class III malocclusion and normal occlusion. Angle Orthodox. 1955; 25:208–222. [Google Scholar]
+35. Boeck EM, Lunardi N, Pinto Ados S, Pizzol KE, Boeck Neto RJ. Occurrence of skeletal malocclusions in Brazilian patients with dentofacial deformities. Braz Dent J. 2011;22(4):340–345. doi: 10.1590/S0103-64402011000400014. [PubMed] [CrossRef] [Google Scholar]
+36. Harris EF, Johnson MG. Heritability of craniometric and occlusal variables: a longitudinal sib analysis. Am J Orthodox Dentofacial Orthop. 1991;99(3):258–268. doi: 10.1016/0889-5406(91)70007-J. [PubMed] [CrossRef] [Google Scholar]
+37. Klingenberg CP, Leamy LJ, Cheverud JM. Integration and modularity of quantitative trait locus effects on geometric shape in the mouse mandible. Genetics. 2004;166(4):1909–1921. doi: 10.1534/genetics.166.4.1909. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+38. Monaco A, Sgolastra F, Cattaneo R, Petrucci A, Marci MC, D'Andrea PD, Gatto R. Prevalence of myopia in a population with malocclusions. Eur J Pediatric Dent. 2012;13(3 Suppl):256–258. [PubMed] [Google Scholar]
+39. Tassopoulou-Fishell M, Deeley K, Harvey EM, Sciote J, Vieira AR. Genetic variation in myosin 1H contributes to mandibular prognathism. Am J Orthodox Dentofacial Orthop. 2012;141(1):51–59. doi: 10.1016/j.ajodo.2011.06.033. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+40. Oltramari-Navarro PV, de Almeida RR, Conti AC, Navarro Rde L, de Almeida MR, Fernandes LS. Early treatment protocol for skeletal Class III malocclusion. Braz Dent J. 2013;24(2):167–173. doi: 10.1590/0103-6440201301588. [PubMed] [CrossRef] [Google Scholar]
+41. Xue F, Wong RW, Rabie AB. Genes, genetics, and Class III malocclusion. Orthodox Craniofacial Res. 2010;13(2):69–74. [PubMed] [Google Scholar]
+42. Stiles KA, Luke JE. The inheritance of malocclusion due to mandibular prognathism. J Hered. 1953; 44:241–245. [Google Scholar]
+43. Mtaya M, Brudvik P, Astrom AN. Prevalence of malocclusion and its relationship with socio-demographic factors, dental caries, and oral hygiene in 12- to 14-year-old Tanzanian schoolchildren. Eur J Orthod. 2009;31(5):467–476. doi: 10.1093/ejo/cjn125. [PubMed] [CrossRef] [Google Scholar]
+44. Thongudomporn U, Freer TJ. Prevalence of dental anomalies in orthodontic patients. Aust Dent J. 1998;43(6):395–398. [PubMed] [Google Scholar]
+45. Simmons HC, 3rd, Oxford DE, Hill MD. The prevalence of skeletal Class II patients found in a consecutive population presenting for TMD treatment compared to the national average. J Tenn Dent Assoc. 2008;88(4):16–18. quiz 18-19. [PubMed] [Google Scholar]
+46. Eggleston DW. The interrelationship of stress and degenerative diseases. J Prosthet Dent. 1980;44(5):541–544. doi: 10.1016/0022-3913(80)90075-X. [PubMed] [CrossRef] [Google Scholar]
+47. Gesch D, Bernhardt O, Mack F, John U, Kocher T, Alte D. Association of malocclusion and functional occlusion with subjective symptoms of TMD in adults: results of the Study of Health in Pomerania (SHIP) Angle Orthod. 2005;75(2):183–190. [PubMed] [Google Scholar]
+48. Gremillion HA. The relationship between occlusion and TMD: an evidence-based discussion. J Evid Based Dent Pract. 2006;6(1):43–47. doi: 10.1016/j.jebdp.2005.12.014. [PubMed] [CrossRef] [Google Scholar]
+49. Yu W, Serrano M, Miguel SS, Ruest LB, Svoboda KK. Cleft lip and palate genetics and application in early embryological development. Indian J Plast Surg. 2009;42(Suppl): S35–50. doi: 10.4103/0970-0358.57185. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+50. Sauer C, Schluter B, Hinz R, Gesch D. Childhood obstructive sleep apnea syndrome: an interdisciplinary approach: a prospective epidemiological study of 4,318 five-and-a-half-year-old children. J Orofac Orthop. 2012;73(5):342–358. doi: 10.1007/s00056-012-0096-x. [PubMed] [CrossRef] [Google Scholar]
+51. Sedaghat AR, Anderson IC, McGinley BM, Rossberg MI, Redett RJ, Ishman SL. Characterization of obstructive sleep apnea before and after tongue-lip adhesion in children with micrognathia. Cleft Palate Craniofac J. 2012;49(1):21–26. doi: 10.1597/10-240. [PubMed] [CrossRef] [Google Scholar]
+52. de Freitas MR, Alcazar NM, Janson G, de Freitas KM, Henriques JF. Upper and lower pharyngeal airways in subjects with Class I and Class II malocclusions and different growth patterns. Am J Orthod Dentofacial Orthop. 2006;130(6):742–745. doi: 10.1016/j.ajodo.2005.01.033. [PubMed] [CrossRef] [Google Scholar]
+53. Ellis E, 3rd, McNamara JA, Jr. Components of adult Class III malocclusion. J Oral Maxillofac Surg. 1984;42(5):295–305. doi: 10.1016/0278-2391(84)90109-5. [PubMed] [CrossRef] [Google Scholar]
+54. Guyer EC, Ellis EE, 3rd, McNamara JA, Jr., Behrents RG. Components of class III malocclusion in juveniles and adolescents. Angle Orthod. 1986;56(1):7–30. [PubMed] [Google Scholar]
+55. Monini S, Malagola C, Villa MP, Tripodi C, Tarentini S, Malagnino I, Marrone V. et al. Rapid maxillary expansion for the treatment of nasal obstruction in children younger than 12 years. Arch Otolaryngol Head Neck Surg. 2009;135(1):22–27. doi: 10.1001/archoto.2008.521. [PubMed] [CrossRef] [Google Scholar]
+56. Gokce SM, Gorgulu S, Gokce HS, Bengi O, Sabuncuoglu F, Ozgen F, Bilgic H. Changes in posterior airway space, pulmonary function and sleep quality, following bimaxillary orthognathic surgery. Int J Oral Maxillofac Surg. 2012;41(7):820–829. doi: 10.1016/j.ijom.2012.01.003. [PubMed] [CrossRef] [Google Scholar]
+57. Koike S, Sujino T, Ohmori H, Shimazaki K, Fukuyama E, Kanai T, Hibi T. et al. Gastric emptying rate in subjects with malocclusion examined by [(13) C] breath test. J Oral Rehabil. 2013;40(8):574–581. doi: 10.1111/joor.12073. [PubMed] [CrossRef] [Google Scholar]
+58. Miller GC, Say B. Immunodeficiency in children with severe craniofacial anomalies. South Med J. 1982;75(1):14–19. doi: 10.1097/00007611-198201000-00005. [PubMed] [CrossRef] [Google Scholar]
+59. Say B, Barber N, Miller GC, Grogg SE. Microcephaly, short stature, and developmental delay associated with a chemotactic defect and transient hypogammaglobulinaemia in two brothers. J Med Genet. 1986;23(4):355–359. doi: 10.1136/jmg.23.4.355. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+60. Tsukahara M, Opitz JM. Dubowitz syndrome: review of 141 cases including 36 previously unreported patients. Am J Med Genet. 1996;63(1):277–289. doi: 10.1002/(SICI)1096-8628(19960503)63:1<277: AID-AJMG46>3.0.CO;2-I. [PubMed] [CrossRef] [Google Scholar]
+61. Moller KT, Gorlin RJ. The Dubowitz syndrome: a retrospective. J Craniofac Genet Dev Biol Suppl. 1985; 1:283–286. [PubMed] [Google Scholar]
+62. Huber RS, Houlihan D, Filter K. Dubowitz syndrome: a review and implications for cognitive, behavioral, and psychological features. J Clin Med Res. 2011;3(4):147–155. [PMC free article] [PubMed] [Google Scholar]
+63. Malinge S, Izraeli S, Crispino JD. Insights into the manifestations, outcomes, and mechanisms of leukemogenesis in Down syndrome. Blood. 2009;113(12):2619–2628. doi: 10.1182/blood-2008-11-163501. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+64. Silva Jesuino FA, Valladares-Neto J. Craniofacial morphological differences between Down syndrome and maxillary deficiency children. Eur J Orthod. 2013;35(1):124–130. doi: 10.1093/ejo/cjr105. [PubMed] [CrossRef] [Google Scholar]
+65. Kilcoyne A. Dental occlusion problems are a major cause of headache. BMJ. 2012;345: e6892. doi: 10.1136/bmj. e6892. [PubMed] [CrossRef] [Google Scholar]
+66. Monaco A, Sgolastra F, Petrucci A, Ciarrocchi I, D'Andrea PD, Necozione S. Prevalence of vision problems in a hospital-based pediatric population with malocclusion. Pediatr Dent. 2013;35(3):272–274. [PubMed] [Google Scholar]
+67. Walji MF, Kalenderian E, Stark PC, White JM, Kookal KK, Phan D, Tran D. et al. BigMouth: a multi-institutional dental data repository. J Am Med Inform Assoc. 2014 doi: 10.1136/amiajnl-2013-002230. [PMC free article] [PubMed] [CrossRef] [Google Scholar]
+
+
+Digital sucking is common in children. Although orthodontic complications have been reported, hand complications of digital sucking are seldom described. Five patients are reported; two had digital deformities and three had infections. Deformities of the digits were improved with splinting. Infections required surgical drainage followed by postoperative splint protection to prevent digital sucking. Splinting prohibited sucking in four of five patients.
+References (6)
+⦁	MoyersRE
+Handbook of orthodontics
+(1973)
+⦁	LindenFPGM Van Der
+Development of dentition
+(1983)
+⦁	ProffitWR et al.
+There are more references available in the full text version of this article.
+Cited by (12)
+Digital sucking induced trophic ulcers caused by nerve deficit from amniotic constriction band
+2010, Journal of Plastic, Reconstructive and Aesthetic Surgery
+Hide abstract
+Two infants presented with amniotic constriction bands (ACB) in the distal third of the forearm. After teeth eruption they developed recurrent skin ulcerations mainly in the distribution of the median nerve from digital sucking. Both patients underwent reconstruction with multiple Z-plasties, followed by neurolysis of the ulnar nerve and sural nerve grafting of the median nerve. This neurological complication presented late in ACB as ulcerative lesions and secondary infection from digital sucking on the insensate digits. Thorough physical examination of the extremities at an early stage in children with ACB is essential to exclude an occult neurological dysfunction. Exploration of peripheral nerves is warranted in cases of deep forearm ACB during their soft tissue reconstruction.
+Causative microorganisms in surgically treated pediatric hand infections
+2005, Journal of Hand Surgery
+Hide abstract
+The causative organisms in many pediatric musculoskeletal infections are distinct from their adult counterparts. We investigated the organisms found in surgically treated hand infections in the pediatric population.
+We reviewed the hospital charts and computer records of all patients who had surgical intervention for infections of the forearm, wrist, and hand from 1996 through 2002 at The Children’s Hospital of Boston.
+Thirty-eight surgical procedures were performed on 31 children for 32 different upper-extremity infections. One patient was treated for 2 separate infections. In the 32 primary procedures 7 cultures grew mixed aerobic/anaerobic organisms, 19 grew aerobic organisms only, 6 grew no organisms, and 2 patients had no cultures. One culture from a secondary surgery was positive for Candida parapsilosis. Staphylococcus aureus was isolated in 15 of the primary cases and was the primary organism in 12. Five of 7 mixed infections were associated with paronychia; 2 of the paronychial infections were complicated by flexor tenosynovitis. Chronic nail biting caused 2 infections and 1 was associated with thumb sucking.
+In the adult population S aureus is the primary organism cultured in 50% to 80% of cases and anaerobic or mixed infection may occur in upward of 29% of patients. In this series S aureus was the primary organism in only 37%. Group A Streptococcus pyogenes was present in 20% of cases. The percentage of children with a mixed aerobic/anaerobic infection was similar to that found in adults; however, the presumed route of introduction was digital sucking/biting. Based on the number of anaerobic/mixed infections without predisposing factors we recommend a broad-spectrum antibiotic regimen including anaerobic coverage as the initial antibiotic in the setting of pediatric hand infections.
+Finger sucking digital deformities
+2001, Journal of Hand Surgery
+Hide abstract
+We report our experience with severe digital deformities caused by prolonged finger sucking. Our analysis of nine patients demonstrated that the deformity was mainly located in the proximal and middle phalanges of the affected digit(s). We have reviewed the literature, enumerated the common patterns of “finger sucking” and explained the resulting deformities. Corrective osteotomy, preferably at the metacarpal base level, is required in severe deformities.
+Eikenella osteomyelitis in a chronic nail biter: A case report
+1995, Journal of Hand Surgery
+Hand Complications in Children from Digital Sucking
+1991, Journal of Hand Surgery
+Oral habits: A behavioral approach
+1991, Pediatric Clinics of North America
+Hide abstract
+This article discusses those behavioral habits that affect oral structures, such as thumb-sucking, use of a pacifier, mouth-breathing, tongue habits, and bruxism. Modification of habit behavior as well as monitoring is also covered in this article.
+View all citing articles on Scopus
+Recommended articles (6)
+⦁	Research article
+Forces and moments applied during derotation of a maxillary central incisor with thinner aligners: An in-vitro study
+American Journal of Orthodontics and Dentofacial Orthopedics, Volume 151, Issue 2, 2017, pp. 407-415
+Hide abstract
+Recent studies have shown that therapeutic loads applied to individual teeth by aligners may substantially exceed recommended values. The primary purpose of this study was to quantify force and moment components during derotation of a maxillary central incisor when 0.3-mm-thick or 0.4-mm-thick polyethylene terephthalate glycol aligners were used instead of conventional polyethylene terephthalate glycol aligners with a minimum thickness of 0.5 mm.
+The test setup consisted of an acrylic model of a maxilla with a separated right central incisor mounted on a 3-dimensional force and moment sensor. The force and moment components were recorded for aligners with thicknesses ranging from 0.3 to 0.75 mm during ±10° rotation and derotation of the separated incisor.
+Moments exerted by the thinnest aligner currently available, 0.5 mm, were 73.57 Nmm for the 10° mesiorotation. In comparison, the corresponding moments with the 0.4-mm and 0.3-mm aligners were 41.08 and 17.84 Nmm, respectively. Moment values for derotation of the maxillary right central incisor into neutral position showed nonlinear return curves indicating viscoelastic material behavior.
+A significant load reduction can be achieved with the new thinner aligners. Because of the form instability of the 0.3-mm aligner during handling, we suggest the novel sequence 0.4, 0.5, and 0.75 mm for aligner systems based on sequentially increased material thickness. This sequence combines sufficiently low initial aligner stiffness and steady load increases in single setup steps. The viscoelastic behavior of polyethylene terephthalate glycol aligners observed during incisor derotation should lead to a reduction of the high initial load exerted directly after intraoral aligner insertion.
+⦁	Research article
+Effects of time and clear aligner removal frequency on the force delivered by different polyethylene terephthalate glycol-modified materials determined with thin-film pressure sensors
+American Journal of Orthodontics and Dentofacial Orthopedics, Volume 155, Issue 1, 2019, pp. 98-107
+Hide abstract
+Many factors influence the force changes of clear aligners. The purpose of this study was to identify the various factors that influence the force changes generated by polyethylene terephthalate glycol-modified (PET-G) materials. Therefore, a force measurement system based on a flexible thin-film pressure sensor was established.
+A series of clear aligners with 2 material properties and different activations at the maxillary central incisor, maxillary second premolar, and maxillary permanent first molar was designed and fabricated. The first material was conventional PET-G; the second material was modified PET-G with a higher modulus of elasticity and greater abrasion resistance. Several models, including teeth and aligners, were produced. Then, a force change detection device, including a thin-film pressure sensor, a signal acquisition circuit board, and a computer, was applied to measure changes in the forces delivered by the conventional and modified PET-G materials with increased frequencies of appliance removal. Finally, the forces were repeatedly measured to detect the force changes over 48 hours.
+The forces of both materials decreased similarly over time. These forces also decreased when the aligner removal frequency increased, but the forces decreased differently. The modified PET-G, with a higher modulus of elasticity and greater abrasion resistance, showed a more stable and lower force change than did the conventional PET-G.
+The forces delivered by both materials were within the orthodontic force range. Force changes were apparent when the appliance removal frequency increased. Compared with the conventional material, the modified PET-G material showed better stability. Therefore, the modified PET-G is a promising and applicable material with advantages for both orthodontists and patients.
+⦁	Research article
+Is ciprofloxacin safe in patients with solitary kidney and upper urinary tract infection?
+Biomedicine & Pharmacotherapy, Volume 84, 2016, pp. 366-372
+Show abstract
+⦁	Research article
+Treatment of a high angle protrusion case optimized with interdisciplinary approaches and TSADs
+AJO-DO Clinical Companion, Volume 1, Issue 4, 2021, pp. 245-258
+Hide abstract
+With the aid of temporary skeletal anchorage devices, a patient with severe skeletal Class II bimaxillary protrusion combined with a high mandibular plane angle and retruded chin can be treated to an acceptable result without orthognathic surgery. Combined intrusion and retraction force systems on both arches with 6 miniscrews were used in this case report for maximal retraction and active vertical control to improve facial profile and chin projection. The infrazygomatic crest and buccal shelf temporary skeletal anchorage devices helped achieve maximal retraction of both dentitions and lips, significantly reducing the protrusion. The anterior subapical miniscrews helped to control the overbite and the incisor torque. Moreover, active vertical control was achieved to reduce the mandibular plane angle and resulted in counterclockwise rotation of the mandible and an improved chin projection. A fairly good treatment result was achieved with adequate communication between the orthodontist, periodontist, and prosthodontist.
+⦁	Research article
+Mechanical behaviour of 3D printed vs thermoformed clear dental aligner materials under non-linear compressive loading using FEM
+Journal of the Mechanical Behavior of Biomedical Materials, Volume 112, 2020, Article 104045
+Hide abstract
+Clear dental aligners are commonly manufactured using thermoplastic materials such as Duran and Durasoft. Using conventional thermoforming methods there are inherent
+ disadvantages including time consumption and poor geometrical accuracies that often occur. The use of digital technologies and 3D printing techniques for producing dental aligners is often preferred where possible. Innovation in 3D printing has resulted in bio-compatible materials becoming more readily available, including Formlabs Dental LT Clear resin, which is a 3D printable and Class IIa bio-compatible material. In this paper, we investigate the difference between thermoplastic materials such as Scheu-Dental Duran and Durasoft and 3D printed Dental LT using Finite Element Analysis (FEA)/Finite Element Modelling (FEM) in a dental aligner case based on an analysis of von Mises stress distribution at molars, incisors and canines for a total of 33161 nodes using Finite Element Analysis (FEA). Maximum von Mises stress distribution at all of the sections under the action of non-linear compressive forces equivalent to human biting force (up to 600 N) were discovered to vary within a range of 0.2–7.7% for Dental LT resin. The Duran and Durasoft cases were comparable, thereby widening the scope for the use of Dental LT in various dentistry applications, including clear aligners.
+⦁	Research article
+Urinary culture sensitivity after a single empirical antibiotic dose for upper or febrile urinary tract infection: A prospective multicentre observational study
+Clinical Microbiology and Infection, Volume 28, Issue 8, 2022, pp. 1099-1104
+Hide abstract
+Urinary culture sensitivity after antibiotics administration is unknown. This study aimed to describe the diagnostic sensitivity of urine cultures from patients' first, second, and third micturition samples after a single dose of empirical antibiotics given for upper and/or febrile urinary tract infections, as well as searched for factors influencing diagnostic sensitivity over time.
+We collected consecutive urine samples from adult patients with an upper or febrile urinary tract infection diagnosed at four secondary hospital emergency rooms. One sample was collected before a first dose of empirical antibiotic treatment and up to three samples were collected from consecutive postadministration micturition. The main outcome was the number of positive cultures growing uropathogens with ≥103 colony forming units (CFUs) for men and ≥104 for women. Identical analyses were performed for any identified CFU and ≥105 CFU cut-off points. Time between antibiotic administration and first negative urinary culture was noted, which could have been at the time of any of the three postantibiotic urine samples. We used a Cox regression analysis for age- and sex-adjusted analyses.
+A total of 86 of 87 patients' preantibiotic cultures (99%) were positive compared with 26 of 75 (35%; p < 0.001), 15 of 50 (30%; p < 0.001), and 1 of 15 (7%; p < 0.001) of the first, second, and third postantibiotic samples, respectively, and missing 14 of 21 (67%), 13 of 17 (76%), and 7 of 7 (100%) of uropathogens with antibiotic resistance, respectively. The times needed for 25%, 50%, and 75% of cultures to be negative were 1.5, 2.9, and 9 hours, respectively, after antibiotic administration. Older age, male sex, non-Escherichia coli pathogens, urinary tract disease, comorbidity burdens, and urinary catheters prolonged time to negative culture, but were not significantly associated after adjustment. Uropathogens were found at ≥105 CFU in 15 of 75 (20%), 7 of 50 (14%), and 0 of 15 (0%) of the three postantibiotic micturition samples, respectively, and in any identified CFU in 48 of 75 (64%), 23 of 50 (46%), and 1 of 15 (7%), respectively.
+Urinary culture sensitivity decreases rapidly after administering antibiotics.
+*
+No benefits in any form have been received or will be received from a commercial party related directly or indirectly to the subject of this article.
+View full text
+Copyright © 1989 American Society for Surgery of the Hand. Published by Elsevier Inc. All rights reserved.
+
+About ScienceDirect
+Remote access
+Shopping cart
+Advertise
+Contact and support
+Terms and conditions
+Privacy policy
+We use cookies to help provide and enhance our service and tailor content and ads. By continuing you agree to the use of cookies.
+Copyright © 2022 Elsevier B.V. or its licensors or contributors. ScienceDirect® is a registered trademark of Elsevier B.V.
+ 
+
+
+
+
+Classes of malocclusion
+Skip to Main Content
+ 
+A free and passive solution to global dental inequality
+Home
+Choose Your Speciality
+Charities
+About Us
+Contact Us
+⦁	
+Subscribe
+Donate
+Course Lead
+ Moiz Bhatti
+Classification of Malocclusion
+The determination of an occlusion/malocclusion is done by comparing the position of the first molars and the canines in each jaw, when the mouth is closed and the teeth touching. In a normal occlusion, the dentition is well aligned and there is no prevalent crowding, no protruding teeth and no undue prominence of the chin. 
+
+
+The differences in classification were defined by Edward Angle in the early 1900, and referred to as “Angle’s Classification”, which are as following:
+ 
+⦁	Normal Occlusion: Present when the mesiobuccal cusp of the upper first molar occludes with the buccal groove of the lower first molar – within this there may be a vertical overlap known as overbite and a horizontal overlap known as overjet
+⦁	In the absence of normal occlusion, the patient is described to have a malocclusion, which is further divided into its own classes and divisions:
+o Class I Malocclusion: Appears to be similar to the normal occlusion but then characterized by crowding, rotations, and other positional irregularities
+o Class II Malocclusion: Occurs when the mesiobuccal cusp of the upper first molar occludes anterior to the buccal groove of the lower first molar. 
+o Class III malocclusion: The mesiobuccal cusp of the upper first molar occludes posterior to the buccal groove of the lower first molar. Class II is then further divided into 2 sub-divisions:
+⦁	Class II – division 1: Upper incisors are tilted outwards, creating significant overjet
+⦁	Class II – division 2: Upper incisors are labially inclined 
+Dental Anatomy ⦁	&⦁	 oral assessment
+0 comments
+1 like. Post not marked as liked1
+Comments
+
+
+Write a comment...
+This website is in its BETA thus some elements may seem out of place
+But I can promise you It'll be worth sticking to see when it's not :)
+Subscribe to The Dental Academy Newsletter
+Be the first to find out when your articles have been published and keep yourself up-to-date in the latest in dentistry!
+Email
+SUBSCRIBE
+
+ 
+
+
+HOME
+ABOUT US
+FOR NEW PATIENTS
+GENERAL DENTISTRY
+IMPROVE YOUR SMILE
+TECHNOLOGY
+CONTACT
+ 
+    
+(812) 558-0181
+ MAKE A PAYMENT
+⦁	 
+PATIENT REVIEWS
+DANGERS OF THUMB SUCKING
+How HPV and Oral Cancer are Related We are committed to your oral health!
+ 
+It’s common for children to suck their thumb at a young age. Drs. Matthew Pierce and Owais Sultan and our team want you to understand the potential issues that can surface down the road if the habit isn’t broken early on.
+It’s normal for infants to explore the function of their mouths by putting objects like their thumbs inside it. You shouldn’t be concerned if your baby regularly sucks his or her thumb. For infants who are still growing their baby teeth, thumb sucking can help with stimulating growth and development of their baby teeth.
+Thumb sucking is not a problem among infants because they generally do it to sooth and comfort themselves. Problems can occur of kids continue the habit when their baby teeth begin to fall out, around six years of age.
+If you have a young child whose adult teeth are starting to come in, that’s when thumb sucking can start to be a problem. Most children stop thumb sucking between the ages of two and three years. According to the American Dental Association, if thumb sucking continues as adult teeth come in, this can lead to problems involving improper alignment of teeth and growth of the jaw, gums, and roof of the mouth.
+It may also affect your child’s speech after that, by causing a lisp or other speech impediments. As a parent, you may need to begin to regulate and intervene if thumb sucking starts to become a bigger problem for your child.
+How to Stop Thumb Sucking
+Provide comfort to your child if thumb sucking happens when he or she is anxious.
+Limit thumb sucking initially to bedtime or naptime.
+Employ positive reinforcement for good behavior.
+Talk with your child about the potential problems that come from this habit.
+Distract your son or daughter with activities such as fun games any time you notice it starting.
+Involve your little one in choosing methods for stopping, like positive rewards.
+Have Drs. Matthew Pierce and Owais Sultan talk to your child to reinforce concerns about thumb sucking.
+Don’t forget that thumb sucking is a common habit that many children indulge in, and it should not be a concern right away. If you’re worried about your child’s thumb-sucking habit, start to address the issue as soon as possible.
+The above techniques can help to reduce the amount of time your child sucks a thumb. Drs. Matthew Pierce and Owais Sultan and our team are here to help you if you have any questions or concerns about this habit.
+Feel free to call our Bloomington, IN office and we will be happy to help you and your child.
+
+
+Adult thumb sucking.
+Causes and effects of adult thumb sucking
+How common is it?
+Causes
+Effects
+How to stop
+Summary
+An adult might suck their thumb because of stress, anxiety, or age regression. Over time, this habit may cause blisters or problems with the teeth.
+Many children stop sucking their thumb at a young age. However, some people continue to suck their thumbs into adolescence or adulthood.
+In this article, we will discuss the causes and effects of adult thumb sucking and look at how someone can stop sucking their thumb.
+ADVERTISEMENT
+Affordable therapy delivered digitally – Try Better Help
+Choose from BetterHelp’s vast network of therapists for your therapy needs. Take a quiz, get matched, and start getting support via secure phone or video sessions. Plans start at $60 per week + an additional 20% off."
+START QUIZ
+How common is it?
+ Share on PinterestAn adult may suck their thumb if they are feeling anxious or stressed.
+There is no reliable data on how many adults suck their thumbs. However, thumb sucking is common in children. Research suggests that around 70%–90% of children suck their thumb.
+Many babies also suck their thumbs, sometimes in utero. Most children will gradually stop sucking their thumbs as they get older, usually between the ages of 2–4Trusted Source.
+Less commonly, thumb sucking will continue into the teenage years. For some, the habit can continue into adulthood.
+Causes of adult thumb sucking
+Thumb sucking is a natural, instinctive behavior that provides comfort. Doctors call it a non-nutritive sucking habitTrusted Source. This is a group of soothing behaviors that also include the use of pacifiers or comfort blankets.
+Babies and children begin sucking their thumbs as a reflex, making them feel secure and safe. The behavior may extend into adulthood for similar reasons. Adults may suck their thumbs as a response to stress or anxiety.
+Thumb sucking could also be a response to trauma. Psychological trauma is a mental and physical response to events a person finds extremely stressful. According to the Substance Abuse and Mental Health Services Administration (SAMHSA)Trusted Source, common examples include bullying, abuse, or a car accident.
+According to Freudian psychoanalysis, a person who encounters challenging events may revert to an earlier stage of development as a way of coping. Psychologists call this age regression. Age regression involves a person adopting the behaviors of someone younger than themselves.
+According to the Primary Care Companion for CNS DisordersTrusted Source, this could include behaviors such as:
+⦁	cuddling stuffed animals
+⦁	engaging in baby talk
+⦁	sucking objects or body parts, such as the thumb
+If a person’s thumb sucking is the result of trauma, they will also experience other signs of trauma, such as:
+⦁	feeling alert, on edge, or unable to sleep
+⦁	intense guilt, shame, anger, or panic
+⦁	flashbacks to the traumatic event
+Learn more about trauma types, symptoms, and treatments.
+Effects of thumb sucking
+Thumb sucking in babies and children is generally harmless. However, excessive thumb sucking can lead to problems. According to a 2020 articleTrusted Source, people who suck their thumb for long periods can develop certain health conditions.
+Blisters
+Excessive thumb sucking can cause blisters on the thumb. Blisters are fluid-filled lumps that form under the skin. They usually occur when the skin is damaged.
+It may be necessary to prevent thumb sucking while the blister heals. A band-aid can protect it from further damage. Avoid bursting the blister to reduce the risk of infection.
+Hyperkeratosis
+Keratin is a tough protein that hardens the skin. In hyperkeratosis, the skin forms additional layers of keratin, making it tough and hard. This can happen in response to the skin being repeatedly irritated.
+Thumb sucking can irritate and put pressure on the skin, which can lead to calluses or corns. Hyperkeratosis can also lead to chronic skin conditions, such as eczema and psoriasis.
+Tooth misalignment
+Over time, thumb sucking can also lead to someone’s teeth moving out of alignment, according to the American Dental Association (ADA). Some people can also develop an overbite.
+Dental problems are more common in those who suck their thumb more intensely. Having the thumb passively in the mouth is less likely to lead to tooth misalignment.
+How to stop adult thumb sucking
+The methods that help a person stop sucking their thumb will depend on the cause. If they notice that they suck their thumb in times of stress or worry, addressing this may help.
+A person could try:
+⦁	replacing thumb sucking with a different stress-relieving activity, such as exercise or meditation
+cognitive behavioral therapy (CBT) can help someone change specific beliefs that may contribute to their anxiety
+⦁	other types of therapy, such as psychotherapy
+The ADA suggest a variety of ways that a parent or caregiver can encourage a child to stop sucking its thumb. An adult can also try similar tactics, such as bandaging the thumb. This makes it difficult to suck, which can help reduce the behavior.
+The National Institutes of Health (NIH) indicate that techniques that help people break other habits may also help someone who wants to stop thumb sucking, such as:
+⦁	setting small goals, such as not sucking the thumb for one day, and then slowly building up
+⦁	giving oneself rewards for each small milestone
+⦁	mentally rehearse not sucking the thumb in situations that normally trigger the behavior
+⦁	asking trusted friends, family, or coworkers for support
+If someone is concerned about their thumb sucking habit, they may wish to talk to a doctor or therapist for advice. A dentist may also be able to help with any impact thumb sucking has on the teeth.
+Summary
+Many babies and young children suck their thumbs, but most stop by the age of 4. However, some people will continue to suck their thumb into adulthood. Vigorous thumb sucking can cause blisters, calluses, and dental problems.
+Sucking their thumb may help an adult feel calm and reassured after experiencing stress or anxiety. Some people may suck their thumb in respsonse to trauma. Addressing the reasons behind the thumb sucking might help someone to stop.
+
+
+
+
+<h2>How is a malocclusion of the teeth treated?</h2>
+<h2>Most people with mild malocclusion will not require treatment. However, your dentist may refer you to an orthodontist if your malocclusion is severe.
+Depending on your type of malocclusion, your orthodontist may recommend various treatments. These can include:</h2>
+<li>⦁	braces to correct the position of your teeth</li>
+<li>⦁	dental appliances or retainers to realign teeth</li>
+<li>⦁	removal of teeth to correct overcrowding</li>
+<li>⦁	reshaping, bonding, or capping of teeth</li>
+<li>⦁	surgery to reshape or shorten your jaw</li>
+Treatment for the condition may also result in some complications. These include:
+<li>⦁	tooth decay</li>
+<li>⦁	pain or discomfort</li>
+<li>⦁	irritation of your mouth from the use of appliances, such as braces</li>
+<li>⦁	difficulty chewing or speaking during treatment</li>
+ 
+0 seconds of 14 secondsVolume 0%
+ 
+
+
+ 
+<h2>How can malocclusion be prevented?</h2
+Preventing the condition can be difficult because most cases of malocclusion are largely hereditary.
+However, growth of your jaw and teeth can also be influenced by environmental factors, according to a 2018 research reviewTrusted Source.
+Parents of young children should limit pacifier and bottle use to help reduce changes in the development of the jaw. Children should also be encouraged to stop sucking their thumbs as young as possible.
+Early detection of malocclusion may help decrease the length and severity of the treatment.</h2>
+
+Understanding the hand bones.
+
+ At the bottom of the hand, is the tarsals. In the middle is the metatarsals. At the top, there is the phalanges of the hand. I will now produce a labelled diagram of the skeleton.
+ 
+
+
+All you need has been said, but I’ll like to make a few advertisements.
+Obafemi Awolowo University Teaching Hospital.
+Go to:
+<a href="https://www.google.com/search?q=oauthc&oq=OAUTHC&aqs=chrome.0.0i512j46i175i199i512j0i512l5j69i60.12023j0j7&sourceid=chrome&ie=UTF-8">Click here </a>
+
+
+Please don’t become a victim of malocclusion and stay safe. Remember, your smiles are at stake! 
+ 
+
+
+Made by Njokanma Chike.</h2>
+ 
+
+
+
+<h2>You are now a member. Contact us with: 080 628 829 89. Go back to homepage.</h2>
+
+<li><a class"active"  href="Register.html">Join Us</a></li>
+
+
+  <footer>
+      <p>Thank you for reading. Copyright & copy 2022. all rights reserved. The Chike History Club.</p>
+  </footer>
+ </body>
+ </html>
